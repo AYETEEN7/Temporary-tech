@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEMPORARY TECH | Train. Intern. Work Abroad.</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background-color: #0b0b0f; color: #fff; overflow-x: hidden; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background: rgba(20, 20, 30, 0.8); position: fixed; width: 100%; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .logo { font-size: 1.4rem; font-weight: 700; color: #00c2ff; }
+    nav { display: flex; align-items: center; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #ccc; transition: 0.3s; }
+    nav a:hover { color: #00c2ff; }
+    .menu-toggle { display: none; flex-direction: column; cursor: pointer; }
+    .menu-toggle span { width: 25px; height: 3px; background: #00c2ff; margin: 4px 0; transition: 0.3s; }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(120deg, #0a0a0a, #111827); padding: 0 1.5rem; margin-top: 80px; }
+    .hero h1 { font-size: 2.5rem; color: #00c2ff; margin-bottom: 1rem; }
+    .hero p { max-width: 600px; color: #aaa; font-size: 1.1rem; margin-bottom: 2rem; }
+    .btn { background: #00c2ff; color: #fff; border: none; padding: 0.8rem 1.6rem; border-radius: 30px; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+    .btn:hover { background: #009bd4; }
+    section { padding: 5rem 2rem; text-align: center; }
+    section h2 { font-size: 2rem; color: #00c2ff; margin-bottom: 1.5rem; }
+    .about p, .programs p { max-width: 800px; margin: 0 auto; color: #ccc; font-size: 1rem; line-height: 1.7; }
+    .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card { background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 0 15px rgba(0, 194, 255, 0.3); }
+    .cta { background: #00c2ff; padding: 3rem 2rem; text-align: center; color: #fff; }
+    .cta h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+    .cta button { background: #fff; color: #0b0b0f; font-weight: 600; }
+    footer { background: #090909; text-align: center; padding: 1.5rem; color: #777; font-size: 0.9rem; }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { display: none; flex-direction: column; position: absolute; top: 80px; right: 0; width: 200px; background: rgba(20,20,30,0.95); border-left: 1px solid #00c2ff; }
+      nav a { margin: 1rem 0; }
+      .menu-toggle { display: flex; }
+    }
+    form { max-width: 500px; margin: 2rem auto; display: flex; flex-direction: column; gap: 1rem; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; }
+    form input, form textarea { padding: 0.8rem; border-radius: 8px; border: none; }
+    form button { align-self: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TEMPORARY TECH</div>
+    <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#students">Students</a>
+      <a href="#partners">Partners</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Train. Intern. Work Abroad.</h1>
+    <p>Empowering students and freshers to build real IT careers through internships, global placements, and industry tie-ups.</p>
+    <button class="btn">Apply for Internship</button>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At TEMPORARY TECH, we bridge the gap between students, training companies, and global employers. Our mission is to create an ecosystem where aspiring developers, analysts, and testers can get trained, gain experience, and start their careers in India or abroad.</p>
+  </section>
+
+  <section id="programs" class="programs">
+    <h2>Our Programs</h2>
+    <div class="program-grid">
+      <div class="card"><h3>Web Development</h3><p>Learn frontend and backend technologies and get hands-on internship opportunities.</p></div>
+      <div class="card"><h3>Data Analytics</h3><p>Analyze, visualize, and understand data — and start your analytics career with confidence.</p></div>
+      <div class="card"><h3>Software Testing</h3><p>Get trained on manual and automation testing with real-world projects.</p></div>
+    </div>
+  </section>
+
+  <section id="students" class="students">
+    <h2>Apply Now</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="skills" placeholder="Key Skills">
+      <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+      <textarea name="note" placeholder="Short note / resume link"></textarea>
+      <button class="btn" type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <section id="partners" class="partners">
+    <h2>For Companies</h2>
+    <p>Partner with us to access skilled, job-ready candidates. Collaborate for training, internships, or global placement tie-ups.</p>
+    <button class="btn">Partner With Us</button>
+  </section>
+
+  <div class="cta">
+    <h3>Ready to start your IT journey?</h3>
+    <button class="btn">Get Started</button>
+  </div>
+
+  <footer>
+    <p>© 2025 TEMPORARY TECH. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>
